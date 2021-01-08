@@ -1,5 +1,4 @@
 class Api::V1::DecksController < ApplicationController
-	skip_before_action :authorized, only: [:index, :create]
 
 	def index
 		decks = Deck.all.includes(:cards)
